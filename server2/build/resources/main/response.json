@@ -1,0 +1,97 @@
+{
+  "servers": [
+    {
+      "name": "Information",
+      "base_url": "/info",
+      "auth": "АУФ (no auth)",
+      "endpoints": [
+        {
+          "url": "/",
+          "method": "GET",
+          "description": "info about this",
+          "params": "none",
+          "example": "/info/",
+          "example_payload": null
+        },
+        {
+          "url": "/api",
+          "method": "GET",
+          "description": "literally this",
+          "params": "none",
+          "example": "/info/api",
+          "example_payload": null
+        },
+        {
+          "url": "/health",
+          "method": "GET",
+          "description": "health info",
+          "params": "none",
+          "example": "/info/health",
+          "example_payload": null
+        }
+      ]
+    },
+    {
+      "name": "Storage",
+      "base_url": "/store",
+      "auth": "SSO for all except /get",
+      "endpoints": [
+        {
+          "url": "/get_data",
+          "method": "GET",
+          "description": "get all data",
+          "params": "none",
+          "example": "/store/get_data",
+          "example_payload": null
+        },
+        {
+          "url": "/get",
+          "method": "GET",
+          "description": "get by key",
+          "params": "key: int",
+          "example": "/store/get?key=123",
+          "example_payload": null
+        },
+        {
+          "url": "/set",
+          "method": "POST",
+          "description": "set key to value",
+          "params": "key: int, value: str",
+          "example": "/store/set",
+          "example_payload": "{\"key\":123,\"value\":\"asd\"}"
+        },
+        {
+          "url": "/remove",
+          "method": "POST",
+          "description": "remove key",
+          "params": "key: int",
+          "example": "/info/",
+          "example_payload": "{\"key\":123}"
+        },
+        {
+          "url": "/health",
+          "method": "GET",
+          "description": "health info",
+          "params": "none",
+          "example": "/info/health",
+          "example_payload": null
+        }
+      ]
+    },
+    {
+      "name": "Common",
+      "base_url": "/common",
+      "auth": "no",
+      "endpoints": [
+        {
+          "url": "/health",
+          "method": "GET",
+          "description": "Get health status of both servers",
+          "params": "none",
+          "example": "/common/health",
+          "example_payload": null
+        }
+      ]
+    }
+  ]
+}

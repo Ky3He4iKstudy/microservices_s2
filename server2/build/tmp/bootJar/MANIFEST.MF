@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+mainClass: dev.ky3he4ik.micro_9_2.ServerApplicationKt
+Main-Class: org.springframework.boot.loader.JarLauncher
+Start-Class: dev.ky3he4ik.micro_9_2.ServerApplicationKt
+Spring-Boot-Version: 2.7.5
+Spring-Boot-Classes: BOOT-INF/classes/
+Spring-Boot-Lib: BOOT-INF/lib/
+Spring-Boot-Classpath-Index: BOOT-INF/classpath.idx
+Spring-Boot-Layers-Index: BOOT-INF/layers.idx
+
